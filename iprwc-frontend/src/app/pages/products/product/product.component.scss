@@ -1,0 +1,46 @@
+.product {
+  background-color: var(--background);
+  border: 3px solid var(--background-light);
+
+  .name {
+    text-align: center;
+    font-size: 22px;
+    padding: 6px;
+    border-bottom: 3px solid var(--background-light);
+  }
+
+  .image {
+    height: 54px;
+    width: 54px;
+    object-fit: contain;
+  }
+
+  .details {
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  button {
+    height: 48px;
+    width: 48px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url('/assets/icons/add.png');
+    background-size: cover;
+    background-position: center;
+
+    &:hover {
+      background-image: url('/assets/icons/add_active.png');
+    }
+  }
+
+  .price {
+    color: var(--text-highlight);
+    text-align: center;
+  }
+}

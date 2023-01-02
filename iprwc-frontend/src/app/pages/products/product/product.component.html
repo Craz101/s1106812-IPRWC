@@ -1,0 +1,13 @@
+<div class="product">
+  <div class="name text-highlight">{{product.name}}</div>
+
+  <div class="details">
+    <img class="image" [src]="product.thumbnail" alt="">
+
+    <button title="Add to cart" class="add-to-cart"></button>
+
+    <div class="price text-highlight">
+      {{product.price | price}} coins
+    </div>
+  </div>
+</div>
