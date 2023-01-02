@@ -1,25 +1,32 @@
 package nl.hsleiden.iprwc.service;
 
-import lombok.AllArgsConstructor;
 import nl.hsleiden.iprwc.exception.NotFoundException;
 import nl.hsleiden.iprwc.model.WebshopUser;
 import nl.hsleiden.iprwc.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@AllArgsConstructor
 @Service
 public class WebshopUserService {
 
-    private final UserRepository userRepository;
+    private UserRepository userRepository;
+
+    @Autowired
+    public WebshopUserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    public WebshopUserService() {
+    }
 
     public WebshopUser add(WebshopUser webshopUser) {
         return userRepository.save(webshopUser);
     }
 
-    public WebshopUser edit(long userId, WebshopUser webshopUser) {
-        webshopUser.setId(userId);
+    public WebshopUser edit(long webshopUserId, WebshopUser webshopUser) {
+        webshopUser.setId(webshopUserId);
         return userRepository.save(webshopUser);
     }
 

@@ -1,9 +1,9 @@
 package nl.hsleiden.iprwc.repository;
 
-import nl.hsleiden.iprwc.model.Product;
+import nl.hsleiden.iprwc.model.PurchaseOrder;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ProductRepository extends JpaRepository<Product, Long> {
+public interface OrderRepository extends JpaRepository<PurchaseOrder, Long> {
 }

@@ -2,6 +2,7 @@ package nl.hsleiden.iprwc.controller;
 
 import nl.hsleiden.iprwc.model.WebshopUser;
 import nl.hsleiden.iprwc.service.WebshopUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -11,6 +12,7 @@ import java.util.List;
 public class WebshopUserController {
     private final WebshopUserService webshopUserService;
 
+    @Autowired
     public WebshopUserController(WebshopUserService WebshopUserService) {
         this.webshopUserService = WebshopUserService;
     }

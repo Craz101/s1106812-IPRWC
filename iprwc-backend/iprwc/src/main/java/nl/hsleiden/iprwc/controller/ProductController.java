@@ -2,7 +2,6 @@ package nl.hsleiden.iprwc.controller;
 
 import nl.hsleiden.iprwc.model.Product;
 import nl.hsleiden.iprwc.service.ProductService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

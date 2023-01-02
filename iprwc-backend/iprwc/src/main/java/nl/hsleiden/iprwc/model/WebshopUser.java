@@ -3,8 +3,7 @@ package nl.hsleiden.iprwc.model;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import jakarta.persistence.OneToOne;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.util.Collection;
@@ -13,10 +12,14 @@ import java.util.Collection;
 public class WebshopUser extends org.springframework.security.core.userdetails.User {
     @Column(nullable = false, unique = true)
     private String email;
-
+    @Column(nullable = false, unique = true)
+    private String username;
     @Column(nullable = false)
     private String password;
+    @Column(nullable = false)
     private String roles;
+    @OneToOne
+    private Cart cart;
 
     @Id
     public long id;
@@ -35,6 +38,15 @@ public class WebshopUser extends org.springframework.security.core.userdetails.U
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Override
