@@ -13,7 +13,6 @@ public class PurchaseOrderLine {
     @OneToOne
     private Product orderedProduct;
     private int quantity;
-    private int discount;
     @Id
     public long id;
 }

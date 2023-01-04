@@ -13,6 +13,7 @@ public class CartLine {
     @OneToOne
     private Product product;
     private int quantity;
+    private int discount;
     @Id
     public long id;
 }
