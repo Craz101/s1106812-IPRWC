@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Twisted bow",
     "description": "A mystical bow carved from the twisted remains of the Great Olm.",
-    "image": "https://oldschool.runescape.wiki/images/Twisted_bow_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Twisted_bow_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Twisted_bow.png",
     "price": 1276262159
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "name": "Elder maul",
     "description": "A maul crafted from the component parts of Tekton.",
-    "image": "https://oldschool.runescape.wiki/images/Elder_maul_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Elder_maul_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Elder_maul.png",
     "price": 9031292
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "name": "Dragon warhammer",
     "description": "Spikey, close combat weapon.",
-    "image": "https://oldschool.runescape.wiki/images/Dragon_warhammer_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Dragon_warhammer_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Dragon_warhammer.png",
     "price": 29085545
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "name": "Dragon Scimitar",
     "description": "A vicious, curved sword.",
-    "image": "https://oldschool.runescape.wiki/images/Dragon_scimitar_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Dragon_scimitar_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Dragon_scimitar.png",
     "price": 59679
   },
@@ -35,15 +35,15 @@
     "id": 5,
     "name": "Bandos chestplate",
     "description": "A sturdy chestplate.",
-    "image": "https://oldschool.runescape.wiki/images/Bandos_chestplate_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Bandos_chestplate_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Bandos_chestplate.png",
     "price": 28693004
   },
   {
     "id": 6,
     "name": "Bandos tassets",
-    "description": "A sturdy chestplate.",
-    "image": "https://oldschool.runescape.wiki/images/Bandos_tassets_detail.png",
+    "description": "A sturdy tassets.",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Bandos_tassets_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Bandos_tassets.png",
     "price": 22965110
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "name": "Ancient mace",
     "description": "It has ancient goblin symbols on it.",
-    "image": "https://oldschool.runescape.wiki/images/Ancient_mace_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Ancient_mace_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Ancient_mace.png",
     "price": 2839
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "name": "Monkey nuts",
     "description": "These are monkey nuts. Yummy.",
-    "image": "https://oldschool.runescape.wiki/images/Monkey_nuts_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Monkey_nuts_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Monkey_nuts.png",
     "price": 173
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "name": "Monkey bar",
     "description": "It's a monkey bar. It looks highly nutritious.",
-    "image": "https://oldschool.runescape.wiki/images/Monkey_bar_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Monkey_bar_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Monkey_bar.png",
     "price": 400
   },
@@ -75,7 +75,7 @@
     "id": 10,
     "name": "Armadyl helmet",
     "description": "A helmet of great craftsmanship.",
-    "image": "https://oldschool.runescape.wiki/images/Armadyl_helmet_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Armadyl_helmet_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Armadyl_helmet.png",
     "price": 8321758
   },
@@ -83,7 +83,7 @@
     "id": 11,
     "name": "Armadyl chestplate",
     "description": "Armour of great craftsmanship.",
-    "image": "https://oldschool.runescape.wiki/images/Armadyl_chestplate_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Armadyl_chestplate_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Armadyl_chestplate.png",
     "price": 33693085
   },
@@ -91,15 +91,15 @@
     "id": 12,
     "name": "Armadyl chainskirt",
     "description": "A chainskirt of great craftsmanship.",
-    "image": "https://oldschool.runescape.wiki/images/Armadyl_chainskirt_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Armadyl_chainskirt_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Armadyl_chainskirt.png",
-    "price": 25004389
+    "price": 33693085
   },
   {
     "id": 13,
     "name": "Saradomin brew",
     "description": "4 doses of Saradomin brew.",
-    "image": "https://oldschool.runescape.wiki/images/Saradomin_brew%284%29_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Saradomin_brew%284%29_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Saradomin_brew%284%29.png",
     "price": 8237
   },
@@ -107,7 +107,7 @@
     "id": 14,
     "name": "Super restore",
     "description": "4 doses of super restore potion.",
-    "image": "https://oldschool.runescape.wiki/images/Super_restore%284%29_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Super_restore%284%29_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Super_restore%284%29.png",
     "price": 10758
   },
@@ -115,7 +115,7 @@
     "id": 15,
     "name": "Super combat potion",
     "description": "4 doses of super combat potion.",
-    "image": "https://oldschool.runescape.wiki/images/Super_combat_potion%284%29_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Super_combat_potion%284%29_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Super_combat_potion%284%29.png",
     "price": 10502
   },
@@ -123,7 +123,7 @@
     "id": 16,
     "name": "Ranging potion",
     "description": "4 doses of super combat potion.",
-    "image": "https://oldschool.runescape.wiki/images/Ranging_potion%284%29_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Ranging_potion%284%29_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Ranging_potion%284%29.png",
     "price": 874
   },
@@ -131,7 +131,7 @@
     "id": 17,
     "name": "Elysian spirit shield",
     "description": "An ethereal shield with an elysian sigil attached to it.",
-    "image": "https://oldschool.runescape.wiki/images/Elysian_spirit_shield_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Elysian_spirit_shield_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Elysian_spirit_shield.png",
     "price": 605372231
   },
@@ -139,7 +139,7 @@
     "id": 18,
     "name": "Armadyl crossbow",
     "description": "A weapon originally developed for Armadyl's forces.",
-    "image": "https://oldschool.runescape.wiki/images/Armadyl_crossbow_detail.png",
+    "imageUrl": "https://oldschool.runescape.wiki/images/Armadyl_crossbow_detail.png",
     "thumbnail": "https://oldschool.runescape.wiki/images/Armadyl_crossbow.png",
     "price": 33096693
   }

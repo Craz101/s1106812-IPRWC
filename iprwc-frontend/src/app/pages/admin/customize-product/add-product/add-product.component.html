@@ -1,0 +1,28 @@
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+  <label for="name">
+    Name
+  </label>
+  <input id="name" type="text" formControlName="name">
+
+  <label for="description">
+    Description
+  </label>
+  <input id="description" type="text" formControlName="description">
+
+  <label for="imageUrl">
+    Image URL
+  </label>
+  <input id="imageUrl" type="text" formControlName="imageUrl">
+
+  <label for="thumbnailUrl">
+    Thumbnail
+  </label>
+  <input id="thumbnailUrl" type="text" formControlName="thumbnailUrl">
+
+  <label for="price">
+    Price
+  </label>
+  <input id="price" type="number" formControlName="price">
+
+  <button class="button" type="submit">Submit</button>
+</form>

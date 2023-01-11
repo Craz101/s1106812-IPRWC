@@ -17,9 +17,11 @@ public class WebshopUser extends org.springframework.security.core.userdetails.U
     @Column(nullable = false)
     private String password;
     @Column(nullable = false)
-    private String roles;
+    private String role;
     @OneToOne
     private Cart cart;
+    @OneToOne
+    private PurchaseOrder orders;
 
     @Id
     public long id;
@@ -58,12 +60,12 @@ public class WebshopUser extends org.springframework.security.core.userdetails.U
         this.password = password;
     }
 
-    public String getRoles() {
-        return roles;
+    public String getRole() {
+        return role;
     }
 
-    public void setRoles(String roles) {
-        this.roles = roles;
+    public void setRole(String roles) {
+        this.role = role;
     }
 
     public long getId() {

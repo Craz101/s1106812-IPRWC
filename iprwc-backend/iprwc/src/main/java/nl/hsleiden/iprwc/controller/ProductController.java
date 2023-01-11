@@ -21,17 +21,17 @@ public class ProductController {
     }
 
     @PutMapping("/{productId}")
-    public Product edit(@RequestParam long productId, Product product) {
+    public Product edit(@PathVariable long productId, @RequestBody Product product) {
         return productService.edit(productId, product);
     }
 
     @DeleteMapping("/{productId}")
-    public void delete(@RequestParam long productId) {
+    public void delete(@PathVariable long productId) {
         productService.delete(productId);
     }
 
     @GetMapping("/{productId}")
-    public Product get(@RequestParam long productId) {
+    public Product get(@PathVariable long productId) {
         return productService.get(productId);
     }
 

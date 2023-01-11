@@ -1,0 +1,35 @@
+<div class="text-highlight">
+    <h1>Products</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <th>{{ product.id }}</th>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td>
+            <button (click)="onEditClick(product)" type="button">Edit</button>
+            <button (click)="onDeleteClick(product)" type="button">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="onAddClick()" type="button">Add</button>
+    
+    <ng-container *ngIf="selectedProduct !== undefined">
+      <app-modal [name]="selectedProduct.name" [open]="modalOpen" (closeModalEvent)="modalOpen = false">
+        <app-edit-product (submitted)="refreshProductList(); modalOpen = false;" [product]="selectedProduct"></app-edit-product>
+      </app-modal>
+    </ng-container>
+    <ng-container *ngIf="modalAddNeeded == true">
+      <app-modal [open]="modalOpen" (closeModalEvent)="modalOpen = false">
+        <app-add-product (submitted)="refreshProductList(); modalOpen = false;"></app-add-product>
+      </app-modal>
+    </ng-container>
+  </div>

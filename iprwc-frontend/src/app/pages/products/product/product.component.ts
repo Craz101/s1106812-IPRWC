@@ -11,4 +11,8 @@ export class ProductComponent {
   product!: Product;
 
   constructor() {}
+
+  addToCart(selectedProduct: Product) {
+
+  }
 }

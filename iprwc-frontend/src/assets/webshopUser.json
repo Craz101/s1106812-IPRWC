@@ -1,6 +1,26 @@
+[
 {
-    "id": 2,
+    "id": 1,
     "username": "CEO_Of_Ticks",
     "email": "CEOOfTicks@gmail.com",
     "role": "user"
+  },
+  {
+    "id": 2,
+    "username": "Klein",
+    "email": "klein@gmail.com",
+    "role": "admin"
+  },
+  {
+    "id": 3,
+    "username": "Heel Erg Groot",
+    "email": "HeelErgGroot@gmail.com",
+    "role": "user"
+  },
+  {
+    "id": 4,
+    "username": "Random",
+    "email": "Random@gmail.com",
+    "role": "user"
   }
+]

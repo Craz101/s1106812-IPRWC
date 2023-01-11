@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import nl.hsleiden.iprwc.exception.NotFoundException;
 import nl.hsleiden.iprwc.model.Product;
 import nl.hsleiden.iprwc.repository.ProductRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,6 +16,10 @@ public class ProductService {
 
     public Product add(Product product) {
         return productRepository.save(product);
+    }
+
+    public void addAll(List<Product> products) {
+        products.forEach(productRepository::save);
     }
 
     public Product edit(long productId, Product product) {

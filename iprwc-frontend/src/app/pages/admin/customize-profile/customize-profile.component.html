@@ -1,0 +1,37 @@
+<div class="text-highlight">
+    <h1>Profile</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let webshopUser of webshopUsers">
+          <th>{{ webshopUser.id }}</th>
+          <td>{{ webshopUser.username }}</td>
+          <td>{{ webshopUser.email }}</td>
+          <td>{{ webshopUser.role }}</td>
+          <td>
+            <button (click)="onEditClick(webshopUser)" type="button">Edit</button>
+            <button type="button">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <button (click)="onAddClick()" type="button">Add</button>
+
+    <ng-container *ngIf="selectedWebshopUser !== undefined">
+      <app-modal [name]="selectedWebshopUser.username" [open]="modalOpen" (closeModalEvent)="modalOpen = false">
+        <app-edit-profile (submitted)="refreshWebshopUserList(); modalOpen = false;" [webshopUser]="selectedWebshopUser"></app-edit-profile>
+      </app-modal>
+    </ng-container>
+    <ng-container *ngIf="modalAddNeeded == true">
+      <app-modal [open]="modalOpen" (closeModalEvent)="modalOpen = false">
+        <app-add-profile (submitted)="refreshWebshopUserList(); modalOpen = false;"></app-add-profile>
+      </app-modal>
+    </ng-container>
+  </div>

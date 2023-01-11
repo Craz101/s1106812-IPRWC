@@ -68,7 +68,8 @@
               "browserTarget": "iprwc-frontend:build:production"
             },
             "development": {
-              "browserTarget": "iprwc-frontend:build:development"
+              "browserTarget": "iprwc-frontend:build:development",
+              "proxyConfig": "proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

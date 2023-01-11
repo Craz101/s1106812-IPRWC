@@ -2,9 +2,9 @@
   <div class="name text-highlight">{{product.name}}</div>
 
   <div class="details">
-    <img class="image" [src]="product.thumbnail" alt="">
+    <img class="image" [src]="product.thumbnailUrl" alt="">
 
-    <button title="Add to cart" class="add-to-cart"></button>
+    <button (click)="addToCart(product)" title="Add to cart" class="add-to-cart"></button>
 
     <div class="price text-highlight">
       {{product.price | price}} coins

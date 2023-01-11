@@ -1,11 +1,11 @@
 package nl.hsleiden.iprwc.model;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
 
 
 @Data
@@ -16,9 +16,9 @@ public class Product {
     private String description;
     private String imageUrl;
     private String thumbnailUrl;
-    private BigDecimal price;
-    private int discount;
+    private int price;
 
     @Id
-    public long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public Long id;
 }
