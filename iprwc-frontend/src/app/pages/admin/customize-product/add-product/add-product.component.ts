@@ -27,7 +27,7 @@ export class AddProductComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (!window.confirm('Do you wish to save this change?')) {
+    if (!window.confirm('Do you wish to save these changes?')) {
       return;
     }
     const product = {...this.addForm.value }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { WebshopUser } from '../models/webshopUser.model';
+import { User } from '../models/user.model';
 
 @Injectable({
     providedIn: 'root',
@@ -18,7 +18,7 @@ export class AppService {
             authorization : 'Basic ' + btoa(credentials.username + ':' + credentials.password)
         } : {});
 
-        this.http.get<WebshopUser>('webshopUser', {headers: headers}).subscribe(response => {
+        this.http.get<User>('/api/user', {headers: headers}).subscribe(response => {
             if (response['username']) {
                 this.authenticated = true;
             } else {

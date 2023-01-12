@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { WebshopUserService } from 'src/app/services/webshopUser.service';
-import { WebshopUser } from '../../models/webshopUser.model';
+import { UserService } from 'src/app/services/user.service';
+import { User } from '../../models/user.model';
 
 @Component({
   selector: 'app-profile',
@@ -9,13 +9,13 @@ import { WebshopUser } from '../../models/webshopUser.model';
 })
 export class ProfileComponent {
   @Input()
-  webshopUser!: WebshopUser[];
+  webshopUser!: User[];
 
-  constructor(private webshopUserService: WebshopUserService) {}
+  constructor(private webshopUserService: UserService) {}
 
   ngOnInit() {
     this.webshopUserService.getAll().subscribe({
-      next: (data: WebshopUser[]) => this.webshopUser = data,
+      next: (data: User[]) => this.webshopUser = data,
       error: () => console.error('foutje')
     })
   }

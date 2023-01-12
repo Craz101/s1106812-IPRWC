@@ -1,23 +1,28 @@
 package nl.hsleiden.iprwc.controller;
 
+import nl.hsleiden.iprwc.model.CartItem;
 import nl.hsleiden.iprwc.model.PurchaseOrder;
+import nl.hsleiden.iprwc.model.PurchaseOrderLine;
 import nl.hsleiden.iprwc.service.OrderService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/purchaseorder")
 public class OrderController {
     private final OrderService orderService;
 
+
     public OrderController(OrderService orderService) {
         this.orderService = orderService;
     }
 
     @PostMapping
-    public PurchaseOrder add(@RequestBody PurchaseOrder purchaseOrder) {
-        return orderService.add(purchaseOrder);
+    public PurchaseOrder add(@RequestBody Map<Integer, PurchaseOrderLine> purchaseOrderLines) {
+
+        return orderService.add(purchaseOrderLines);
     }
 
     @PutMapping("/{orderId}")

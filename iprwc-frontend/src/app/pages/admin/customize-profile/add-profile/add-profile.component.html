@@ -19,5 +19,9 @@
     </label>
     <input id="password" type="password" formControlName="password">  
     <button class="button" type="submit">Submit</button>
+
+    <div *ngIf="error.length > 0" class="error">
+      {{ error }}
+    </div>
   </form>
   

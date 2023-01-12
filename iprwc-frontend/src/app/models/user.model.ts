@@ -1,6 +1,6 @@
-import { WebshopOrder } from "./webshopOrder.model";
+import { Order } from "./order.model";
 
-export interface WebshopUser {
+export interface User {
     id: number;
     username: string;
     email: string;

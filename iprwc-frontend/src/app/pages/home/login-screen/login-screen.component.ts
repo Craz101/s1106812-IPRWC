@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { WebshopUserService } from 'src/app/services/webshopUser.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login-screen',
@@ -21,7 +21,7 @@ export class LoginScreenComponent {
 
   constructor(
     private fb: FormBuilder,
-    private userService: WebshopUserService,
+    private userService: UserService,
     private router: Router,
     private http: HttpClient
   ) {}

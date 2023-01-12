@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { WebshopUser } from 'src/app/models/webshopUser.model';
+import { User } from 'src/app/models/user.model';
 
 @Component({
   selector: 'app-edit-profile',
@@ -10,7 +10,7 @@ import { WebshopUser } from 'src/app/models/webshopUser.model';
 export class EditProfileComponent {
 
   @Input()
-  webshopUser!: WebshopUser;
+  webshopUser!: User;
   editForm!: FormGroup;
   tempPassword!: string;
   constructor(private formBuilder: FormBuilder) {}

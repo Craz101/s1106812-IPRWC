@@ -1,0 +1,23 @@
+.image {
+    height: 54px;
+    width: 54px;
+    object-fit: contain;
+  }
+
+  button {
+    background-image: url('/assets/button.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    font-size: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+    color: var(--white);
+    padding: 30px;
+  
+    div {
+      margin: 6px 0;
+    }
+  }

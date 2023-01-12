@@ -2,18 +2,28 @@ package nl.hsleiden.iprwc.service;
 
 import lombok.AllArgsConstructor;
 import nl.hsleiden.iprwc.exception.NotFoundException;
+import nl.hsleiden.iprwc.model.CartItem;
 import nl.hsleiden.iprwc.model.PurchaseOrder;
+import nl.hsleiden.iprwc.model.PurchaseOrderLine;
 import nl.hsleiden.iprwc.repository.OrderRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Service
 @AllArgsConstructor
 public class OrderService {
     private final OrderRepository orderRepository;
 
-    public PurchaseOrder add(PurchaseOrder purchaseOrder) {
+    public PurchaseOrder add(Map<Integer, PurchaseOrderLine> purchaseOrderLines) {
+        PurchaseOrder purchaseOrder = new PurchaseOrder();
+        purchaseOrder.setPurchasedProducts(new ArrayList<>());
+        purchaseOrderLines.forEach((k, v) -> {
+            purchaseOrder.getPurchasedProducts().add(v);
+            purchaseOrder.setTotalPrice(purchaseOrder.getTotalPrice() + v.getCount() * v.getProduct().getPrice());
+        });
         return orderRepository.save(purchaseOrder);
     }
 

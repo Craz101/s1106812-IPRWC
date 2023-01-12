@@ -1,1 +1,12 @@
-<p>cart works!</p>
+<div class="text-highlight">
+    <h3>Shopping Cart</h3>
+
+    <div class="cart-item" *ngFor="let cartItem of cartItems | keyvalue">
+        <img class="image" [src]="cartItem.value.product.thumbnailUrl" alt="">
+        <span>{{ cartItem.value.product.name }}</span>
+        <span>{{ cartItem.value.product.price | price}}</span>
+        <span>{{ cartItem.value.count }}</span>
+
+    </div>
+    <button (click)="onOrderItems()" type="submit">Order Items</button>
+</div>

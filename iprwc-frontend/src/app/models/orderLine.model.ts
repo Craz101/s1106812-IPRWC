@@ -1,6 +1,6 @@
 import { Product } from "./product.model";
 
-export interface WebshopOrderLine {
+export interface OrderLine {
     product: Product;
     quantity: number;
 }

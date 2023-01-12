@@ -1,8 +1,6 @@
 package nl.hsleiden.iprwc.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,8 +9,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class PurchaseOrderLine {
     @OneToOne
-    private Product orderedProduct;
-    private int quantity;
+    private Product product;
+    private int count;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
 }

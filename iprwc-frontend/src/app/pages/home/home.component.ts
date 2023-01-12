@@ -14,14 +14,12 @@ export class HomeComponent {
     this.modalRegister = false
     this.modalLogIn = true;
     this.modalOpen = true;
-    console.log(this.modalLogIn, this.modalRegister)
   }
 
   onRegisterClick() {
     this.modalLogIn = false;
     this.modalRegister = true;
     this.modalOpen = true;
-    console.log(this.modalLogIn, this.modalRegister)
   }
 
 }

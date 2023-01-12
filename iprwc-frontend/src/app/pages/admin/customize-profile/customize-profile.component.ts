@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { WebshopUser } from 'src/app/models/webshopUser.model';
-import { WebshopUserService } from 'src/app/services/webshopUser.service';
+import { User } from 'src/app/models/user.model';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-customize-profile',
@@ -9,19 +9,19 @@ import { WebshopUserService } from 'src/app/services/webshopUser.service';
 })
 export class CustomizeProfileComponent {
 
-  webshopUsers: WebshopUser[] = [];
-  selectedWebshopUser!: WebshopUser;
+  webshopUsers: User[] = [];
+  selectedWebshopUser!: User;
   modalOpen: boolean = false;
   modalAddNeeded: boolean = false;
 
-  constructor(private webshopUserService: WebshopUserService) {}
+  constructor(private webshopUserService: UserService) {}
 
   onAddClick(){
     this.modalAddNeeded = true;
     this.modalOpen = true;
   }
 
-  onEditClick(selectedWebshopUser: WebshopUser) {
+  onEditClick(selectedWebshopUser: User) {
     this.modalAddNeeded = false;
     this.selectedWebshopUser = selectedWebshopUser;
     this.modalOpen = true;
@@ -29,14 +29,14 @@ export class CustomizeProfileComponent {
 
   refreshWebshopUserList() {
     this.webshopUserService.getAll().subscribe({
-      next: (data: WebshopUser[]) => this.webshopUsers = data,
+      next: (data: User[]) => this.webshopUsers = data,
       error: () => console.error('u dun goofed')
     })
   }
   
   ngOnInit() {
     this.webshopUserService.getAll().subscribe({
-      next: (data: WebshopUser[]) => this.webshopUsers = data,
+      next: (data: User[]) => this.webshopUsers = data,
       error: () => console.error('u dun goofed')
     })
   }
