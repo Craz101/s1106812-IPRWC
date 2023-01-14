@@ -51,7 +51,12 @@ public class SecurityAuthenticationFilter extends UsernamePasswordAuthentication
                 .withClaim("id", user.getId())
 //                .withExpiresAt(new Date(System.currentTimeMillis() + 3600000)) 1 hour expiration
                 .sign(Algorithm.HMAC512(secret));
-        response.addHeader("Authorization", "Bearer " + token);
+        // response.addHeader("Authorization", "Bearer " + token);
+
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+
+        response.getWriter().write("{Authorization: Bearer "+ token + "}");
     }
 
 
