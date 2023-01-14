@@ -1,4 +1,4 @@
-import { HttpClient, HttpResponse } from "@angular/common/http";
+import { HttpClient, HttpHeaders, HttpResponse } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { JwtHelperService } from "@auth0/angular-jwt";
 import { BehaviorSubject, map } from "rxjs";
@@ -32,25 +32,22 @@ export class AuthService {
   }
 
   login(email: string, password: string) {
-    return this.http
-      .post(environment.api + `/api/login`, { email, password }, { observe: 'response' })
-      .pipe(
-        map((response: HttpResponse<any>) => {
-          const token = response.headers.get('Authorization') as string;
-          const decodedToken = this.jwtHelperService.decodeToken(token);
+    const headers = new HttpHeaders().append('Content-Type', 'application/json');
 
-          const user: User = {
-            username: decodedToken.sub,
-            email: decodedToken.email,
-            role: decodedToken.role,
-            id: decodedToken.id,
-            key: token.includes('Bearer') ? token : `Bearer ${token}`,
-          };
+    this.http.post<any>(environment.api + `/api/login`, { email, password }, { headers, observe: 'response' }).subscribe(resp => {
+      const token = resp?.body?.authorization ?? "";
+      const decodedToken = this.jwtHelperService.decodeToken(token);
 
-          localStorage.setItem('user', JSON.stringify(user));
+      const user: User = {
+        username: decodedToken.sub,
+        email: decodedToken.email,
+        role: decodedToken.role,
+        id: decodedToken.id,
+        key: token.includes('Bearer') ? token : `Bearer ${token}`,
+      };
 
-          this.userSubject$.next(user);
-        })
-      );
+      this.userSubject$.next(user);
+      localStorage.setItem('user', JSON.stringify(user));
+    });
   }
 }

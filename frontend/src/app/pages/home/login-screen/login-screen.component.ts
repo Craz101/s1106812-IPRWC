@@ -27,12 +27,11 @@ export class LoginScreenComponent {
     private http: HttpClient,
     private authService: AuthService
   ) {}
-  
+
   login(form: FormGroup) {console.log(this.loginForm.value)
     const email = form.value.email;
     const password = form.value.password;
-    this.authService.login(email, password).subscribe();
-
+    this.authService.login(email, password);
   }
 
 }
