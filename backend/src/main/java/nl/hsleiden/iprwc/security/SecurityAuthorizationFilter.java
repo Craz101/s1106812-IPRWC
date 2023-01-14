@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 
 public class SecurityAuthorizationFilter extends BasicAuthenticationFilter {
 
-    @Value("${token.secret")
+    @Value("${token.secret}")
     private String secret;
 
     public SecurityAuthorizationFilter(AuthenticationManager manager) {
