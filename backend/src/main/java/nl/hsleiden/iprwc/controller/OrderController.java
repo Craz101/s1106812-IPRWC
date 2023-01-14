@@ -14,6 +14,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/purchaseorder")
+@CrossOrigin(origins = "*", maxAge = 3600)
 public class OrderController {
     private final OrderService orderService;
 
