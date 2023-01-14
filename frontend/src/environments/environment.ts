@@ -1,3 +1,3 @@
 export default {
-  api: 'http://85.10.139.7:8080'
+  api: 'http://twistedexchange.nl:8080'
 }

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { AppService } from './services/app.service';
 import { CartComponent } from './pages/cart/cart.component';
 import { LoginScreenComponent } from './pages/home/login-screen/login-screen.component';
 import { ProductsComponent } from './pages/products/products.component';
@@ -26,6 +25,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes), FormsModule],
   exports: [RouterModule],
-  providers: [AppService]
+  providers: []
 })
 export class AppRoutingModule { }
