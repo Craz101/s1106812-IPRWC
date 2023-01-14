@@ -19,7 +19,7 @@ public class UserService {
     private PasswordEncoder passwordEncoder;
 
     public User add(User user) {
-        if(userRepository.existsUserByUsername(user.getUsername())) {
+        if (userRepository.existsUserByUsername(user.getUsername())) {
             throw new UsernameTakenException();
         }
         if (userRepository.existsUserByEmail(user.getEmail())) {
@@ -28,6 +28,10 @@ public class UserService {
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
+    }
+
+    public void addAdminUser(User user) {
+        if (user.getRole() == null) user.setRole("user");
     }
 
     public User edit(long userId, User user) {
@@ -46,6 +50,7 @@ public class UserService {
     public User get(long userId) {
         return userRepository.findById(userId).orElseThrow(NotFoundException::new);
     }
+
     public User get(String userEmail) {
         return userRepository.findByEmail(userEmail);
     }
