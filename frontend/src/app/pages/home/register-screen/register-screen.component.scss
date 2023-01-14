@@ -1,0 +1,29 @@
+button {
+    background-image: url('/assets/button.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    font-size: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    font-size: 15px;
+    border: none;
+    color: var(--white);
+    padding: 12px;
+  
+    div {
+      margin: 6px 0;
+    }
+  }
+  
+  form {
+    width: 20%;
+    display: grid;
+    grid-template-columns: 2fr 1r;
+    gap: 5px;
+
+  }
+  
+  button {
+    grid-column: span 1;
+  }

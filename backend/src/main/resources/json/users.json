@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "username": "Admin",
+    "password": "admin",
+    "email":  "admin@twistedexchange.com",
+    "role": "admin"
+  },
+  {
+    "id": 2,
+    "username": "User",
+    "password": "user",
+    "email":  "user@twistedexchange.com",
+    "role": "user"
+  }
+]
