@@ -30,6 +30,12 @@ public class UserService {
         return userRepository.save(user);
     }
 
+    public void addAdminUser(User user) {
+        if(user.getRole() == null) {
+            user.setRole("user");
+        }
+    }
+
     public User edit(long userId, User user) {
         user.setId(userId);
         return userRepository.save(user);
