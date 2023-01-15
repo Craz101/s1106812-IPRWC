@@ -10,16 +10,16 @@ import { User } from 'src/app/models/user.model';
 export class EditProfileComponent {
 
   @Input()
-  webshopUser!: User;
+  user!: User;
   editForm!: FormGroup;
   tempPassword!: string;
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnChanges(): void {
     this.editForm = this.formBuilder.group({
-      username: this.webshopUser.username,
-      email: this.webshopUser.email,
-      role: this.webshopUser.role,
+      username: this.user.username,
+      email: this.user.email,
+      role: this.user.role,
       password: this.tempPassword
     });
   }

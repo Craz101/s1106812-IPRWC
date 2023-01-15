@@ -24,9 +24,9 @@
     </table>
     <button (click)="onAddClick()" type="button">Add</button>
 
-    <ng-container *ngIf="selectedWebshopUser !== undefined">
-      <app-modal [name]="selectedWebshopUser.username" [open]="modalOpen" (closeModalEvent)="modalOpen = false">
-        <app-edit-profile (submitted)="refreshWebshopUserList(); modalOpen = false;" [webshopUser]="selectedWebshopUser"></app-edit-profile>
+    <ng-container *ngIf="user !== undefined">
+      <app-modal [name]="user.username" [open]="modalOpen" (closeModalEvent)="modalOpen = false">
+        <app-edit-profile (submitted)="refreshWebshopUserList(); modalOpen = false;" [user]="user"></app-edit-profile>
       </app-modal>
     </ng-container>
     <ng-container *ngIf="modalAddNeeded == true">

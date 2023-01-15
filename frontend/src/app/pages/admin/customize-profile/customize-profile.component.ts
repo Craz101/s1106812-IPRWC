@@ -10,32 +10,38 @@ import { UserService } from 'src/app/services/user.service';
 export class CustomizeProfileComponent {
 
   webshopUsers: User[] = [];
-  selectedWebshopUser!: User;
+  user!: User;
   modalOpen: boolean = false;
   modalAddNeeded: boolean = false;
+  
 
-  constructor(private webshopUserService: UserService) {}
+  constructor(private userService: UserService) {}
 
   onAddClick(){
     this.modalAddNeeded = true;
     this.modalOpen = true;
   }
 
-  onEditClick(selectedWebshopUser: User) {
+  onEditClick(user: User) {
     this.modalAddNeeded = false;
-    this.selectedWebshopUser = selectedWebshopUser;
+    this.user = user;
     this.modalOpen = true;
   }
 
+  onDeleteClik(user: User) {
+    this.user = user;
+    this.userService.delete(user.id)
+  }
+
   refreshWebshopUserList() {
-    this.webshopUserService.getAll().subscribe({
+    this.userService.getAll().subscribe({
       next: (data: User[]) => this.webshopUsers = data,
       error: () => console.error('u dun goofed')
     })
   }
   
   ngOnInit() {
-    this.webshopUserService.getAll().subscribe({
+    this.userService.getAll().subscribe({
       next: (data: User[]) => this.webshopUsers = data,
       error: () => console.error('u dun goofed')
     })
