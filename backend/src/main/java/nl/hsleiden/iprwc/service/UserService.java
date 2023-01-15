@@ -26,12 +26,9 @@ public class UserService {
             throw new EmailTakenException();
         }
 
+        if (user.getRole() == null) user.setRole("user");
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
-    }
-
-    public void addAdminUser(User user) {
-        if (user.getRole() == null) user.setRole("user");
     }
 
     public User edit(long userId, User user) {

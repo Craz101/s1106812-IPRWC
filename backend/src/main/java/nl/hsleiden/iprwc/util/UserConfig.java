@@ -25,7 +25,6 @@ public class UserConfig {
             InputStream inputStream = TypeReference.class.getResourceAsStream("/json/users.json");
             try {
                 List<User> users = mapper.readValue(inputStream, typeReference);
-                users.forEach(userService::addAdminUser);
                 users.forEach(userService::add);
             } catch (IOException e){
                 System.out.println("Unable to save users: " + e.getMessage());
