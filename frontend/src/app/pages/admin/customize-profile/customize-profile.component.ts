@@ -28,7 +28,7 @@ export class CustomizeProfileComponent {
     this.modalOpen = true;
   }
 
-  onDeleteClik(user: User) {
+  onDeleteClick(user: User) {
     this.user = user;
     this.userService.delete(user.id)
   }
