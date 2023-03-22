@@ -33,14 +33,14 @@ export class RegisterScreenComponent {
     const username = form.value.username;
     const password = form.value.password;
 
-    this.authService.signup(username, email, password).subscribe(
-      resData => {
+    this.authService.signup(username, email, password).subscribe({
+      next: (resData) => {
         console.log(resData);
       },
-      error => {
-        console.log(error);
+      error: (err) => {
+        console.log(err);
       }
-    );
+    });
   }
 
 }

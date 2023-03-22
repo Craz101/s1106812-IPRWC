@@ -13,6 +13,10 @@
   </button>
 </div>
 
+<div class="login-message" [ngClass]="{success: success}">
+  You have successfully logged in!
+</div>
+
 <ng-container *ngIf="modalLogIn == true">
   <app-modal [open]="modalOpen" (closeModalEvent)="modalOpen = false;">
     <app-login-screen (submitted)= "modalOpen = false;"> </app-login-screen>

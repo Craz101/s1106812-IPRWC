@@ -29,6 +29,7 @@
     width: 48px;
     border: none;
     cursor: pointer;
+    position: relative;
     background-color: transparent;
     background-image: url('/assets/icons/add.png');
     background-size: cover;
@@ -37,6 +38,28 @@
     &:hover {
       background-image: url('/assets/icons/add_active.png');
     }
+  }
+
+  img {
+    order: -1;
+    transition: transform 0.3s, opacity 0.2s;
+    pointer-events: none;
+  }
+
+  .add-to-cart {
+    transition: transform 0.3s;
+  }
+
+  .add-to-cart.adding {
+    transform: scale(1.2);
+    
+  }
+
+  .add-to-cart.adding + img {
+    transform: translateY(140%) scale(0.4);
+    transform-origin: top;
+    opacity: 0;
+
   }
 
   .price {

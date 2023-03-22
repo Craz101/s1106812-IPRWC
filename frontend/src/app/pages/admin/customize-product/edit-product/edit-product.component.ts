@@ -38,9 +38,7 @@ export class EditProductComponent implements OnChanges {
       next: (data: Product) => {
         this.product = data;
         this.submitted.emit();
-      },
-
-      error: () => console.error('u dun goofed')
+      }
     })
   }
 

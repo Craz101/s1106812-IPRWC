@@ -13,7 +13,6 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginScreenComponent {
 
   credentials = {email: '', password: ''};
-  error = "";
 
   loginForm: FormGroup = this.fb.group({
     email: ['', [Validators.required]],
@@ -25,7 +24,7 @@ export class LoginScreenComponent {
     private userService: UserService,
     private router: Router,
     private http: HttpClient,
-    private authService: AuthService
+    public authService: AuthService
   ) {}
 
   login(form: FormGroup) {console.log(this.loginForm.value)

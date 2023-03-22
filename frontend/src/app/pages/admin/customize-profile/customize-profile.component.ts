@@ -35,15 +35,13 @@ export class CustomizeProfileComponent {
 
   refreshWebshopUserList() {
     this.userService.getAll().subscribe({
-      next: (data: User[]) => this.webshopUsers = data,
-      error: () => console.error('u dun goofed')
+      next: (data: User[]) => this.webshopUsers = data
     })
   }
   
   ngOnInit() {
     this.userService.getAll().subscribe({
-      next: (data: User[]) => this.webshopUsers = data,
-      error: () => console.error('u dun goofed')
+      next: (data: User[]) => this.webshopUsers = data
     })
   }
 }

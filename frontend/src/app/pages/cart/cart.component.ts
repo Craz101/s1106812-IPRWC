@@ -10,9 +10,8 @@ import { CartService } from 'src/app/services/cart-service';
 })
 export class CartComponent implements OnChanges{
   order!: Order;
-  cartItems = this.cartService.getItems();
 
-  constructor(private cartService: CartService) {}
+  constructor(public cartService: CartService) {}
 
   ngOnChanges(): void {
     
@@ -26,10 +25,9 @@ export class CartComponent implements OnChanges{
     if (!window.confirm('Do you wish to order these items?')) {
       return;
     }
-    this.cartService.post(this.cartItems).subscribe({
+    this.cartService.post(this.cartService.items).subscribe({
       next: () => this.cartService.clearCart(),
-      error: () => console.error('u dun goofed')
-    })
+    });
   }
 }
 

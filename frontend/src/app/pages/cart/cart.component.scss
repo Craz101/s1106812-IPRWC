@@ -24,3 +24,23 @@
       font-size: 15px;
     }
   }
+
+.buttons {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.cart-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 24px;
+}

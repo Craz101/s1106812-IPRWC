@@ -6,3 +6,15 @@
   background-size: contain;
   padding: 18px 60px;
 }
+
+@media (max-width: 800px) {
+  .site-wrapper {
+    padding: 18px 36px;
+  }
+}
+
+@media (max-width: 400px) {
+  .site-wrapper {
+    padding: 18px 18px;
+  }
+}

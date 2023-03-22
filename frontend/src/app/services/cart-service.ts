@@ -25,8 +25,12 @@ export class CartService{
             }
         }
     }
+
+    get count() {
+        return Object.values(this.cartItems).reduce((acc, obj) => acc + obj.count, 0);
+    }
     
-    getItems() {
+    get items() {
         return this.cartItems;
     }
 

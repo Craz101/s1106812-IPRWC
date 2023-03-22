@@ -31,15 +31,13 @@ export class CustomizeProductComponent {
       return;
     }
     this.productService.delete(selectedProduct.id).subscribe({
-      next: () => this.refreshProductList(),
-      error: () => console.error('u dun goofed')
+      next: () => this.refreshProductList()
     })
   }
   
   refreshProductList() {
     this.productService.getAll().subscribe({
-      next: (data: Product[]) => this.products = data,
-      error: () => console.error('u dun goofed')
+      next: (data: Product[]) => this.products = data
     })
   }
 

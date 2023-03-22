@@ -31,3 +31,64 @@ button {
     margin: 6px 0;
   }
 }
+
+@media (max-width: 800px) {
+  .header {
+    flex-wrap: wrap;
+
+    img {
+      order: -1;
+      width: 100%;
+    }
+
+    button {
+       margin-top: 20px;
+    }
+  }
+}
+
+.login-message {
+  background-color: var(--twisted-green);
+  color: var(--black);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 12px auto;
+  padding: 12px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  width: 100%;
+  max-width: 800px;
+  animation: appear 3s forwards;
+  display: none;
+  
+  &.success {
+    display: block;
+  }
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(-140%);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(-140%);
+  }
+  100% {
+    transform: translateY(-140%);
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    flex-direction: column;
+  }
+}

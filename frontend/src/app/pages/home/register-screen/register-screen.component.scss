@@ -9,21 +9,45 @@ button {
     font-size: 15px;
     border: none;
     color: var(--white);
-    padding: 12px;
+    padding: 24px;
   
     div {
       margin: 6px 0;
     }
   }
   
-  form {
-    width: 20%;
-    display: grid;
-    grid-template-columns: 2fr 1r;
-    gap: 5px;
-
-  }
+form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1r;
+  gap: 5px;
+}
   
-  button {
-    grid-column: span 1;
-  }
+.form-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 6px;
+  margin-top: 12px;
+}
+
+input {
+  padding: 6px 12px;
+}
+
+button {
+  grid-column: span 1;
+  margin-top: 6px;
+}
+
+.error {
+  width: 100%;
+  text-align: center;
+  color: red;
+}

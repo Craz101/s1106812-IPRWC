@@ -1,21 +1,26 @@
 button {
-    background-image: url('/assets/button.gif');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: transparent;
-    font-size: Arial, Helvetica, sans-serif;
-    cursor: pointer;
-    font-size: 15px;
-    border: none;
-    color: var(--white);
-    padding: 12px;
+  background-image: url('/assets/button.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  font-size: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  font-size: 15px;
+  border: none;
+  color: var(--white);
+  padding: 12px;
 
-    div {
-      margin: 6px 0;
-    }
+  div {
+    margin: 6px 0;
   }
+}
 
-  td {
-    padding: 10px;
-  }
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+table + button {
+  margin-top: 12px;
+}

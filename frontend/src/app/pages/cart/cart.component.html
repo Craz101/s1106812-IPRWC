@@ -1,17 +1,25 @@
 <div class="text-highlight">
-    <h3>Shopping Cart</h3>
+    <h1>Shopping Cart</h1>
 
-    <div class="cart" *ngFor="let cartItem of cartItems | keyvalue">
-        <img class="image" [src]="cartItem.value.product.thumbnailUrl" alt="">
+    <div class="cart" *ngFor="let cartItem of cartService.items | keyvalue">
         <div class="cart-content">
-        <span>{{ cartItem.value.product.name }}</span>
-        <span>      ||    </span>
-        <span>{{ cartItem.value.product.price | price}}</span>
-        <span>      ||    </span>
-        <span>{{ cartItem.value.count }}</span>
+            <img class="image" [src]="cartItem.value.product.thumbnailUrl" alt="">
+            <span>{{ cartItem.value.product.name }}</span>
+            <span>         </span>
+            <span>{{ cartItem.value.product.price | price}} coins</span>
+            <span>         </span>
+            <span>x{{ cartItem.value.count }}</span>
         </div>
     </div>
-    <button (click)="onOrderItems()" type="submit">Order Items</button>
-    <button (click)="clearCart()" type="submit">Clear Cart</button>
 
+    <div class="empty-cart" *ngIf="cartService.count === 0; else buttons">
+        There are no items in your cart.
+    </div>
+
+    <ng-template #buttons>
+        <div class="buttons">
+            <button (click)="onOrderItems()" type="submit">Order Items</button>
+            <button (click)="clearCart()" type="submit">Clear Cart</button>
+        </div>
+    </ng-template>
 </div>

@@ -1,0 +1,41 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: var(--background);
+  border: 3px solid var(--background-light);
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.close {
+  background-image: url('/assets/icons/close.png');
+  background-size: cover;
+  cursor: pointer;
+  border: none;
+  width: 30px;
+  height: 30px;
+
+  &:hover {
+    background-image: url('/assets/icons/close_active.png');
+  }
+}

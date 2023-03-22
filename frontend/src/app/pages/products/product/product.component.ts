@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Renderer2 } from '@angular/core';
 import { CartService } from 'src/app/services/cart-service';
 import { Product } from '../../../models/product.model';
 
@@ -11,10 +11,11 @@ export class ProductComponent  {
   @Input()
   product!: Product;
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService, private renderer: Renderer2) {}
 
-  addToCart(selectedProduct: Product) {
+  addToCart(event: Event, selectedProduct: Product) {
     this.cartService.addToCart(selectedProduct);
-    window.alert('Your item has been added to the cart');
+    this.renderer.addClass(event.target, 'adding');
+    setTimeout(() => this.renderer.removeClass(event.target, 'adding'), 300);
   }
 }

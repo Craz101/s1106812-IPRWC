@@ -8,6 +8,7 @@
   --background: #473E32;
   --background-light: #5A5245;
   --text-highlight: #FF981F;
+  --scroll-white: #d9bc7f;
 }
 
 @font-face {
@@ -65,3 +66,24 @@ a {
   }
 }
 
+h1 {
+  margin-top: 36px;
+  margin-bottom: 24px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  thead {
+    text-align: left;
+  }
+
+  td {
+    padding: 6px;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: var(--brown);
+  }
+}

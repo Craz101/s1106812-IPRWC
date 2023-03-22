@@ -9,39 +9,21 @@ import { CartComponent } from './pages/cart/cart.component';
 import { LoginScreenComponent } from './pages/home/login-screen/login-screen.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { HomeComponent } from './pages/home/home.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { ProductComponent } from './pages/products/product/product.component';
-import { PricePipe } from './shared/price.pipe';
-import { ModalComponent } from './components/modal/modal.component';
-import { CustomizeProductComponent } from './pages/admin/customize-product/customize-product.component';
-import { AdminComponent } from './pages/admin/admin.component';
-import { CustomizeProfileComponent } from './pages/admin/customize-profile/customize-profile.component';
-import { EditProductComponent } from './pages/admin/customize-product/edit-product/edit-product.component';
-import { EditProfileComponent } from './pages/admin/customize-profile/edit-profile/edit-profile.component';
-import { AddProductComponent } from './pages/admin/customize-product/add-product/add-product.component';
-import { AddProfileComponent } from './pages/admin/customize-profile/add-profile/add-profile.component';
 import { RegisterScreenComponent } from './pages/home/register-screen/register-screen.component';
 import { AuthenticationInterceptor } from './shared/authentication-interceptor';
+import { AdminModule } from './pages/admin/admin.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     CartComponent,
     LoginScreenComponent,
     ProductComponent,
-    CustomizeProductComponent,
     ProductsComponent,
     CartComponent,
-    AdminComponent,
-    CustomizeProfileComponent,
     HomeComponent,
-    PricePipe,
-    EditProductComponent,
-    ModalComponent,
-    EditProfileComponent,
-    AddProductComponent,
-    AddProfileComponent,
     RegisterScreenComponent,
   ],
   imports: [
@@ -51,6 +33,8 @@ import { AuthenticationInterceptor } from './shared/authentication-interceptor';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    AdminModule,
+    SharedModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthenticationInterceptor, multi: true },

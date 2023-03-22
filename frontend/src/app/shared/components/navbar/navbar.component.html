@@ -1,0 +1,15 @@
+<nav [ngClass]="{open: navOpen}">
+  <ul>
+    <li><a routerLink="/">Twisted Exchange</a></li>
+    <li class="hamburger" (click)="navOpen = !navOpen">
+      <img src="/assets/hamburger.svg" alt="">
+    </li>
+    <li>
+      <ul class="nav-links">
+        <li (click)="navOpen = false" *ngIf="authService.userSubject$.value?.role === 'admin'"><a routerLink="/admin">Admin</a></li>
+        <li (click)="navOpen = false" ><a routerLink="/products">Products</a></li>
+        <li (click)="navOpen = false" ><a routerLink="/cart">Cart {{ cartService.count === 0 ? '' : '(' + cartService.count + ')' }}</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>

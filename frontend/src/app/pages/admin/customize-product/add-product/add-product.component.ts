@@ -32,8 +32,7 @@ export class AddProductComponent implements OnInit {
     }
     const product = {...this.addForm.value }
     this.productService.post(product).subscribe({
-      next: () => this.submitted.emit(),
-      error: () => console.error('u dun goofed')
+      next: () => this.submitted.emit()
     })
   }
 }

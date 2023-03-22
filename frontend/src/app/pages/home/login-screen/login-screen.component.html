@@ -1,15 +1,16 @@
 <div class="text-highlight">
 	<form role="form" (submit)="login(loginForm)" [formGroup]="loginForm">
 		<div class="form-group">
-			<label for="email">Email:</label> 
+			<label for="email">Email</label> 
        		<input type="text"
 				class="form-control" id="email" name="email" formControlName="email"/>
 		</div>
 		<div class="form-group">
-			<label for="password">Password:</label> 
+			<label for="password">Password</label> 
 			<input type="password"
 				class="form-control" id="password" name="password" formControlName="password"/>
 		</div>
+		<div class="error">{{authService.error}}</div>
 		<button type="submit">Log In</button>
 	</form>
 </div>
