@@ -10,12 +10,17 @@ services:
     restart: always
     ports:
       - 3306:3306
+    networks:
+      - internal
   frontend:
     build: ./frontend/
     ports:
       - "80:80"
     depends_on:
       - backend
+    networks:
+      - internal
+      - web
   backend:
     build: ./backend/
     ports:
@@ -25,3 +30,11 @@ services:
       - database
     links:
       - database:iprwc
+    networks:
+      - internal
+      - web
+networks:
+  web:
+    external: true
+  internal:
+    external: false
