@@ -6,7 +6,7 @@ services:
       - './data/mariadb/:/var/lib/mysql/'
     environment:
       MYSQL_DATABASE: iprwc
-      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_ROOT_PASSWORD: r2yxfbs633KEAoQa3fbYH8VGXQJK74EHxtNsA7Gm
     restart: always
     ports:
       - 3306:3306
